@@ -1,0 +1,7 @@
+in this file we will discuss about all the thought processes going on
+so for now this is a fairly starting vite+react app with gemini api configuration and basic routing for instance let me show all that.
+firstly play some music
+music + coding = "heaven"
+btw iam using pnpm as a package manager for its reusability feature
+finally a pleasant debugging session
+btw i will push all of this on github.com/Amaansaifidev/React-gemini.git
