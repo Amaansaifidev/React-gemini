@@ -1,10 +1,11 @@
 import React from 'react'
-function About(){
+import { Link } from 'react-router-dom'
+const About = () => {
   return(
-    <>
-      <h1>this is about page</h1>
-    </>
-    
-    )
+  <Link to={"/"}><button>
+  go to home page
+</button>
+</Link>
+  )
 }
 export default About;

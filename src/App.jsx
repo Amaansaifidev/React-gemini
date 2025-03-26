@@ -1,5 +1,6 @@
 import React from 'react'
-const App = () => {
+import { Link } from "react-router-dom";
+import axios from 'axios'
 
 const handlePostRequest = async () => {
     try {
@@ -15,11 +16,11 @@ const handlePostRequest = async () => {
     }
   };
 
+const App = () => {
   return (
-    <div>
-      <h1>Click to Send POST Request</h1>
-      <button onClick={handlePostRequest}>Send Request</button>
-    </div>
+    <>
+<button onClick={handlePostRequest}>send request</button>
+</>
     )
 }
 export default App;
