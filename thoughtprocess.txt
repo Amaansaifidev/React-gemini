@@ -5,3 +5,5 @@ music + coding = "heaven"
 btw iam using pnpm as a package manager for its reusability feature
 finally a pleasant debugging session
 btw i will push all of this on github.com/Amaansaifidev/React-gemini.git
+finally i pushed it to git
+i really hate npm
