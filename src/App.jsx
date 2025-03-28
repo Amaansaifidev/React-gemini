@@ -19,7 +19,7 @@ const [question, setQuestion] = useState("");
 
 const handlePostRequest = async () => {
     try {
-      setAnswer("loading")
+      setAnswer("loading...")
       const response = await axios.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyCzSc8Vi_MfwfqLUz2Veg7pKU-ULcYmtec", {
   "contents": [{
     "parts":[{"text": `${question}`}]
