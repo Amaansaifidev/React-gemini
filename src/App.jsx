@@ -12,7 +12,7 @@ import TextField from '@mui/material/TextField';
 const App = () => {
 const [question, setQuestion] = useState("");
 
- const [answer, setAnswer] = useState("loading....")
+ const [answer, setAnswer] = useState("")
   const handleChange = (e) => {
     setQuestion(e.target.value)
   }
@@ -50,6 +50,8 @@ const handlePostRequest = async () => {
             width:"50%",
           }}>
 <p style={{
+border:"1px solid gold",
+borderRadius:"5px",
  display:"block",
   fontSize: "12px",
 }}>{answer}</p>
