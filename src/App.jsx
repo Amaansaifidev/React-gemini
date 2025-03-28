@@ -31,6 +31,11 @@ const handlePostRequest = async () => {
       console.error("Error:", error);
     }
   };
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handlePostRequest();
+    }
+  };
   return (
         <>
           <ButtonAppBar />
@@ -52,6 +57,7 @@ const handlePostRequest = async () => {
 <TextField variant="outlined" id="input" placeholder="type your msg" 
 type="text"
 onChange={handleChange}
+onKeyDown={handleKeyPress} 
 value={question}
 style={{
   display:"block",
