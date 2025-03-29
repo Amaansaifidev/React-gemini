@@ -42,10 +42,15 @@ const handlePostRequest = async () => {
   };
   
   return (
-        <>
-          <ButtonAppBar />
+        <div style={{
+  background: "linear-gradient( to right, pink, skyblue)", // Example gradient
+  height: "100vh", // Ensure it covers the full page height
+  
+  
+}}>
+          <ButtonAppBar/>
           
-  <GoogleLogin
+  <GoogleLogin 
         onSuccess={(response) => {
         const name = jwtDecode(response.credential).name
           setName(name)
@@ -58,7 +63,7 @@ const handlePostRequest = async () => {
           
             marginRight:"10%",
             marginLeft:"10%",
-            marginTop:"10%",
+            
             
             justifyContent:"center",
             alignItems:"center",
@@ -68,6 +73,7 @@ const handlePostRequest = async () => {
               welcome {name}
             </p>
 <p style={{
+  
 border:"1px solid gold",
 borderRadius:"5px",
  display:"block",
@@ -94,7 +100,7 @@ style={{
 }}>send request</Button>
 </div>
 
-</>
+</div>
     );
   
 }
