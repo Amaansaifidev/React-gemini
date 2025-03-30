@@ -9,9 +9,9 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import { GoogleLogin } from '@react-oauth/google';
-import { jwtDecode } from "jwt-decode";
 
+import { jwtDecode } from "jwt-decode";
+import GoogleAuth from './Components/GoogleAuth.jsx'
 
 const App = () => {
   const [copySucces, setCopySucces] = useState("")
@@ -67,16 +67,8 @@ const handlePostRequest = async () => {
   
 }}>
           <ButtonAppBar/>
-          
-  <GoogleLogin 
-        onSuccess={(response) => {
-        const name = jwtDecode(response.credential).name
-          setName(name)
-        }}
-        onError={() => {
-          console.log("Login Failed");
-        }}
-      />
+          <GoogleAuth />
+
           <div style={{
           
             marginRight:"5%",
@@ -97,7 +89,7 @@ borderRadius:"5px",
  display:"block",
   fontSize: "12px",
 }}>{answer}</p>
-<Button variant="outlined" endIcon={
+<Button variant="outlined" size="small" endIcon={
   <ContentCopyIcon />
 } onClick={copyhandler}>copy Answer</Button>
 

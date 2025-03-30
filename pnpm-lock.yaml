@@ -26,6 +26,9 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.0.17
         version: 4.0.17(vite@6.2.3(jiti@2.4.2)(lightningcss@1.29.2))
+      appwrite:
+        specifier: ^17.0.1
+        version: 17.0.1
       axios:
         specifier: ^1.8.4
         version: 1.8.4
@@ -788,6 +791,9 @@ packages:
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
+
+  appwrite@17.0.1:
+    resolution: {integrity: sha512-bTLxle4wasY8uQewr/tdANC4AhQ/AkcaPfMd0L9N4tQecQwUVXow2EhlWh98jURBAMn6cyoN/G46G4w3sVkcOQ==}
 
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
@@ -2161,6 +2167,8 @@ snapshots:
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
+
+  appwrite@17.0.1: {}
 
   argparse@2.0.1: {}
 
