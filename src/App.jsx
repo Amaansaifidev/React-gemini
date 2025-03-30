@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import axios from 'axios'
 import SendIcon from '@mui/icons-material/Send';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { useState } from 'react'
 import ButtonAppBar from './Components/Navbar.jsx'
 import Stack from '@mui/material/Stack';
@@ -13,6 +14,21 @@ import { jwtDecode } from "jwt-decode";
 
 
 const App = () => {
+  const [copySucces, setCopySucces] = useState("")
+  const copyhandler = async () => {
+    
+  if (!answer) {
+    setCopySucces("No text to copy!");
+    return;
+  }
+  
+  try {
+    await navigator.clipboard.writeText(answer);
+    setCopySucces("Copied successfully!");
+  } catch (err) {
+    setCopySucces("Failed to copy!");
+  }
+};
   const [name, setName] = useState("")
 const [question, setQuestion] = useState("");
 
@@ -31,6 +47,7 @@ const handlePostRequest = async () => {
    });
 
       setAnswer(response.data.candidates[0].content.parts[0].text);
+      
     } catch (error) {
       console.error("Error:", error);
     }
@@ -44,7 +61,8 @@ const handlePostRequest = async () => {
   return (
         <div style={{
   background: "linear-gradient( to right, pink, skyblue)", // Example gradient
-  height: "100vh", // Ensure it covers the full page height
+  height: "100%",
+  width: "100%"
   
   
 }}>
@@ -61,13 +79,13 @@ const handlePostRequest = async () => {
       />
           <div style={{
           
-            marginRight:"10%",
-            marginLeft:"10%",
+            marginRight:"5%",
+            marginLeft:"5%",
             
             
             justifyContent:"center",
             alignItems:"center",
-            width:"50%",
+            width:"90%",
           }}>
             <p>
               welcome {name}
@@ -79,6 +97,9 @@ borderRadius:"5px",
  display:"block",
   fontSize: "12px",
 }}>{answer}</p>
+<Button variant="outlined" endIcon={
+  <ContentCopyIcon />
+} onClick={copyhandler}>copy Answer</Button>
 
 <TextField variant="outlined" id="input" placeholder="type your msg" 
 type="text"
@@ -90,6 +111,7 @@ style={{
   padding:"-1px"
 }}
 />
+
 
 <Button variant="contained" endIcon={<SendIcon />} size="small" onClick={handlePostRequest}
 className="ans"
