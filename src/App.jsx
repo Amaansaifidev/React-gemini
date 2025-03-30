@@ -40,7 +40,7 @@ const [question, setQuestion] = useState("");
 const handlePostRequest = async () => {
     try {
       setAnswer("loading...")
-      const response = await axios.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyCzSc8Vi_MfwfqLUz2Veg7pKU-ULcYmtec", {
+      const response = await axios.post(import.meta.env.VITE_API_URL, {
   "contents": [{
     "parts":[{"text": `${question}`}]
     }]
