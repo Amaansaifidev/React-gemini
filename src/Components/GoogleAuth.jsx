@@ -30,7 +30,7 @@ function GoogleAuth() {
   const loginWithGoogle = async () => {
     try {
       // The URL to redirect back to after authentication
-      const redirectUrl = window.location.origin;
+      const redirectUrl = "https://latent-ai.netlify.app";
       
       // Create OAuth session with Google
       account.createOAuth2Session('google', redirectUrl, `${redirectUrl}/auth-failure`);
