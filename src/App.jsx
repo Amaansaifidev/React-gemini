@@ -62,7 +62,8 @@ const handlePostRequest = async () => {
         <div style={{
   background: "linear-gradient( to right, pink, skyblue)", // Example gradient
   height: "100%",
-  width: "100%"
+  width: "100%",
+  minHeight: "100vh"
   
   
 }}>
