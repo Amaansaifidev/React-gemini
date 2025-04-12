@@ -18,7 +18,7 @@ const App = () => {
   const inputref = useRef(null)
   const [copySucces, setCopySucces] = useState("")
   function renew() {
-    inputref.current.value = "";
+    setQuestion("")
   }        
   function click() {
     renew();
