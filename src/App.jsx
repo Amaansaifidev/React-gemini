@@ -17,21 +17,20 @@ import GoogleAuth from './Components/GoogleAuth.jsx'
 const App = () => {
   const inputref = useRef(null)
   const [copySucces, setCopySucces] = useState("")
+  function renew() {
+    inputref.current.value = "";
+  }        
+  function click() {
+    renew();
+    handlePostRequest();
+  }
   const copyhandler = async () => {
     
   if (!answer) {
     setCopySucces("No text to copy!");
     return;
   }
-    function click() {
-      renew()
-      handlePostRequest();
-    }
-    function renew() {
-      inputref.current.value = ""
-    }
-  
-  try {
+     try {
     await navigator.clipboard.writeText(answer);
     setCopySucces("Copied successfully!");
   } catch (err) {
