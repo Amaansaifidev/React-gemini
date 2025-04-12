@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios'
 import SendIcon from '@mui/icons-material/Send';
@@ -14,6 +15,7 @@ import { jwtDecode } from "jwt-decode";
 import GoogleAuth from './Components/GoogleAuth.jsx'
 
 const App = () => {
+  const inputref = useRef(null)
   const [copySucces, setCopySucces] = useState("")
   const copyhandler = async () => {
     
@@ -21,6 +23,13 @@ const App = () => {
     setCopySucces("No text to copy!");
     return;
   }
+    function click() {
+      renew()
+      handlePostRequest();
+    }
+    function renew() {
+      inputref.current.value = ""
+    }
   
   try {
     await navigator.clipboard.writeText(answer);
@@ -58,6 +67,7 @@ const handlePostRequest = async () => {
     }
   };
   
+  
   return (
         <div style={{
   background: "linear-gradient( to right, pink, skyblue)", // Example gradient
@@ -94,7 +104,7 @@ borderRadius:"5px",
   <ContentCopyIcon />
 } onClick={copyhandler}>copy Answer</Button>
 
-<TextField variant="outlined" id="input" placeholder="type your msg" 
+<TextField ref={inputref} variant="outlined" id="input" placeholder="type your msg" 
 type="text"
 onChange={handleChange}
 onKeyDown={handleKeyPress} 
@@ -106,7 +116,7 @@ style={{
 />
 
 
-<Button variant="contained" endIcon={<SendIcon />} size="small" onClick={handlePostRequest}
+<Button variant="contained" endIcon={<SendIcon />} size="small" onClick={click}
 className="ans"
 style={{
    border: "1px solid black",
@@ -115,7 +125,8 @@ style={{
 }}>send request</Button>
 </div>
 
-</div>
+</div
+    >
     );
   
 }
