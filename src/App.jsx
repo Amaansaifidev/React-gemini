@@ -128,7 +128,7 @@ borderRadius:"5px",
   <ContentCopyIcon />
 } onClick={copyhandler}>copy Answer</Button>
 
-<TextField className="placeholder-white"  ref={inputref} variant="outlined" id="input" placeholder="type your msg" 
+<TextField className="placeholder-red"  ref={inputref} variant="outlined" id="input" placeholder="type your msg" 
 type="text"
 onChange={handleChange}
 onKeyDown={handleKeyPress} 
@@ -149,8 +149,7 @@ style={{
 }}>send request</Button>
 </div>
 
-</div
-    >
+</div>
     );
   
 }
