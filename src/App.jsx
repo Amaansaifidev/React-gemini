@@ -91,22 +91,15 @@ const handlePostRequest = async () => {
   
   
 }}>
-      <Menubar>
+      <Menubar className="bg-gray-900 text-white border-gray-700 dark">
   <MenubarMenu>
     <MenubarTrigger>File</MenubarTrigger>
-    <MenubarContent>
-      <MenubarItem>
-        New Tab <MenubarShortcut>⌘T</MenubarShortcut>
-      </MenubarItem>
-      <MenubarItem>New Window</MenubarItem>
-      <MenubarSeparator />
-      <MenubarItem>Share</MenubarItem>
-      <MenubarSeparator />
-      <MenubarItem>Print</MenubarItem>
+    <MenubarContent className="bg-gray-800 text-white">
+      <MenubarItem>New Tab</MenubarItem>
+      <MenubarItem>Open File</MenubarItem>
     </MenubarContent>
   </MenubarMenu>
 </Menubar>
-
      <GoogleAuth />
 
           <div style={{
