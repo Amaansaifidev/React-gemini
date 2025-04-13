@@ -56,8 +56,18 @@ function GoogleAuth() {
     <div>
       {user ? (
         <div>
-          <h2>Welcome, {user.name}</h2>
-          <p>Email: {user.email}</p>
+          <h2
+       style={{
+              color: "white"
+            }}
+          >Welcome, {user.name}</h2>
+          <p
+         style={{
+              color: "white"
+            }} 
+
+
+          >Email: {user.email}</p>
           <Button variant="outlined" size="medium" onClick={logout}>Logout</Button>
         </div>
       ) : (
