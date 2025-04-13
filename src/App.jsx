@@ -126,7 +126,7 @@ borderRadius:"5px",
   <ContentCopyIcon />
 } onClick={copyhandler}>copy Answer</Button>
 
-<input className=" focus:border-blue-500 placeholder-white text-white bg-black border p-2"  ref={inputref} variant="outlined" id="input" placeholder="type your msg" 
+<input className=" focus:border-blue-700 placeholder-white text-white bg-black border p-2"  ref={inputref} variant="outlined" id="input" placeholder="type your msg" 
 type="text"
 onChange={handleChange}
 onKeyDown={handleKeyPress} 
