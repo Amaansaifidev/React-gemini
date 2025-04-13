@@ -112,11 +112,11 @@ const handlePostRequest = async () => {
             alignItems:"center",
             width:"90%",
           }}>
-            <p>
+            <p className="text-white">
               welcome {name}
             </p>
 <p style={{
-  
+          color: "white"
 border:"1px solid gold",
 borderRadius:"5px",
  display:"block",
