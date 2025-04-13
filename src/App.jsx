@@ -84,7 +84,7 @@ const handlePostRequest = async () => {
   
   return (
         <div style={{
-  background: "slate", // Example gradient
+  background: "black", // Example gradient
   height: "100%",
   width: "100%",
   minHeight: "100vh"
@@ -115,8 +115,10 @@ const handlePostRequest = async () => {
             <p className="text-white">
               welcome {name}
             </p>
-<p style={{
-          color: "white"
+<p 
+className="text-white"
+          style={{
+          
 border:"1px solid gold",
 borderRadius:"5px",
  display:"block",
