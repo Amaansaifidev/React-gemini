@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 const About = () => {
   return(
   <>
-    <Accordion type="single" collapsible>
+    <Accordion type="single" className="bg-black" collapsible>
   <AccordionItem value="item-1">
     <AccordionTrigger>Is it accessible?</AccordionTrigger>
     <AccordionContent>
