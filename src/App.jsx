@@ -91,7 +91,8 @@ const handlePostRequest = async () => {
 }}>
       <Menubar className="bg-gray-900 text-white border-gray-700 dark">
   <MenubarMenu>
-    <MenubarTrigger>home</MenubarTrigger>
+    <MenubarTrigger className="font-special">
+            home</MenubarTrigger>
     <MenubarContent className="bg-gray-800 text-white">
       <MenubarItem><Link to="/about">About</Link></MenubarItem>
     </MenubarContent>
